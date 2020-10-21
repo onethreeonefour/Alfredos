@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import './Components/Navigation/Navigation.css';
+import LandingPage from './Components/Landing/LandingPage';
+import NavBar from './Components/Navigation/Navbar';
+import Footer from './Components/Navigation/Footer'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NavBar />
+    <LandingPage />
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );

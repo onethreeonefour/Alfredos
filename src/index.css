@@ -1,13 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(243, 224, 200, 1);
+}
+
+p, button {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-family: 'Charmonman', cursive;
+}
+
+h2 {
+  font-family: 'Cormorant', serif;
+  font-weight: lighter;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.heading-text {
+  font-size: 4rem;
+  text-align: center;
+  padding: 3.5rem 0 3.5rem 0;
+}
+
+.hero-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3e0c8;
+  background-image: url("./Images/Hero/p1.png");
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.09);
+}
+
+.hero-container h1 {
+  font-size: 4.5rem;
+}
+
+.hero-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  color: #A23C2A;
+  font-size: 1.75rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-grid:nth-child(1) {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 3px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.137);
+}
+
+.hero-grid img {
+  max-height: 500px;
+}
+
+.cta-main, .cta-secondary {
+  margin: 1.75rem 1.5rem 0 0rem;
+  transition: all .4s ease-in-out;
+  font-size: 1.25rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.cta-secondary:hover {
+  color: #A23C2A;
+  border: 2px solid #A23C2A;
+}
+
+.cta-main {
+  background-color: #A23C2A;
+  color: white;
+  border: 2px solid #A23C2A;
+}
+
+.cta-main:hover {
+  color: black;
+  background-color: transparent;
+}
+
+.menu-container {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+}
+
+.menu-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.menu-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.096);
+}
+
+.menu-card-number {
+  color: rgb(204, 201, 201);
+}
+
+.menu-card-price {
+  text-align: right;
+  color: rgb(100, 93, 93);
+}
+
+.menu-card h2 {
+  font-size: 2.5rem;
+  padding: 2rem 0 2rem 0;
+}
+
+.menu-card-image {
+  height: 400px;
+  width: 400px;
+  border-radius: 3px;
+}
+
+.about-container {
+  width: 85%;
+  margin: auto;
+}
+
+.about-grid {
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: #fffffff3;
+}
+
+.about-grid-text {
+  width: 65%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.about-grid-text h2 {
+  font-size: 2.25rem;
+  padding-bottom: 1rem;
+}
+
+.about-grid-text hr {
+  margin-bottom: 1rem;
+}
+
+.about-grid-image-container {
+  height: 570px;
+  overflow: hidden;
+}
+
+.about-grid-image-container img {
+  transition: transform .7s ease-in-out;
+}
+
+.about-grid-image-container:hover img {
+  transform: scale(1.2);
+}
+
+.contact-container {
+  width: 65%;
+  margin: auto;
+  padding-bottom: 5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.699);
+  padding: 2rem;
+}
+
+.form-detail {
+  text-align: center;
+  margin: auto;
+}
+
+.form-detail h4 {
+  font-weight: lighter;
+  font-size: 1.2rem;
+  padding: 1rem 0 1rem 0;
+}
+
+.form-detail img {
+  height: 150px;
+  filter: saturate(0);
+}
+
+.form-detail-trading-hours {
+  background-color: rgba(245, 222, 179, 0.308);
+  border-radius: 3px;
+}
+
+.form-detail-trading-hours p {
+  padding: 0.5rem;
+}
+
+.form-input {
+  text-align: center;
+}
+
+.form-input h2 {
+  font-size: 2rem;
+}
+
+.form-input label {
+  display: block;
+  padding: 0.5rem
+}
+
+.form-input input, textarea {
+  width: 85%;
+  font-size: 1.5rem;
+  outline-color: rgba(114, 110, 114, 0.281);
+  border: 1px solid rgba(0, 0, 0, 0.192);
+}
+
+.form-input textarea {
+  height: 200px;
+}
+
+.form-input button {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  padding: 1rem;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  background-color: #A23C2A;
+  color: white;
+  border: 2px solid #A23C2A;
+  border-radius: 5px;
+}
+
+.form-input button:hover {
+  background-color: transparent;
+  color: black
 }
