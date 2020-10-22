@@ -1,10 +1,20 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .navbar {
     display: flex;
     align-items: center;
-    background-color: rgba(235, 212, 168, 0.479);
+    background-color: rgb(228, 169, 153);
     width: 100%;
     color: black;
-    font-weight: 300;
+    font-weight: 100;
+    position: absolute;
+}
+
+.navbar h1 {
+    font-size: 1.75rem;
 }
 
 .navbar__title {
@@ -14,7 +24,7 @@
 }
 
 .navbar__item {
-    padding: 16px 16px;
+    padding: 1rem 1rem;
     cursor: pointer;
     vertical-align: middle;
 }
@@ -22,7 +32,7 @@
 footer {
     align-items: center;
     text-align: center;
-    background-color: rgba(235, 212, 168, 0.479);
+    background-color: rgba(180, 58, 27, 0.2);
     padding: 2rem;
 }
 

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(243, 224, 200, 1);
+  background-image: url("./Images/Hero/p1.png");
 }
 
 p, button {
@@ -40,8 +42,10 @@ code {
   justify-content: center;
   align-items: center;
   background-color: #f3e0c8;
-  background-image: url("./Images/Hero/p1.png");
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.09);
+  background: linear-gradient( rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url("./Images/Hero/background.webp");
+  background-position: center top;
+  background-size: cover;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-container h1 {
@@ -157,6 +161,7 @@ code {
   justify-content: center;
   align-items: center;
   background-color: #fffffff3;
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-grid-text {
@@ -197,11 +202,13 @@ code {
 
 .form-grid {
   display: grid;
+  border-radius: 3px;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.699);
   padding: 2rem;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-detail {
@@ -221,8 +228,9 @@ code {
 }
 
 .form-detail-trading-hours {
-  background-color: rgba(245, 222, 179, 0.308);
+  background-color: rgba(245, 222, 179, 0.508);
   border-radius: 3px;
+  padding: 0.75rem;
 }
 
 .form-detail-trading-hours p {
@@ -268,4 +276,158 @@ code {
 .form-input button:hover {
   background-color: transparent;
   color: black
+}
+
+/**4K**/
+
+@media screen and (min-width: 3840px) {
+  .about-container, .menu-card-container {
+    width: 65%;
+    margin: auto;
+  }
+  .hero-grid {
+    gap: 4rem
+  }
+  .hero-grid:nth-child(1) {
+    padding: 5rem;
+  }
+  .hero-grid h1 {
+    font-size: 7.5rem;
+  }
+  .hero-grid img {
+    max-height: 900px;
+  }
+  .cta-main, .cta-secondary {
+    font-size: 1.5rem;
+    margin-top: 2rems;
+  }
+  .menu-card-image {
+    height: 500px;
+    width: 500px;
+  }
+  .about-container {
+    width: 50%;
+  }
+  .contact-container {
+    width: 50%;
+  }
+}
+
+/**1440P**/
+
+@media screen and (min-width: 2560px) {
+  .about-container {
+    width: 70%;
+  }
+  .menu-card-image {
+    height: 500px;
+    width: 500px;
+  }
+  .contact-container {
+    width: 60%;
+  }
+}
+
+/**Tablet Pro**/
+
+@media screen and (max-width: 1024px) {
+  .hero-grid:nth-child(1) {
+    padding: 2rem;
+    margin: 0 3rem 0 3rem;
+  }
+  .hero-grid h1 {
+    font-size: 4rem;
+  }
+  .hero-grid img {
+    max-height: 400px;
+  }
+  .menu-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .menu-card-image {
+    height: 400px;
+    width: 400px;
+  }
+  .about-container {
+    width: 92.5%;
+  }
+  .about-grid-image-container {
+    height: 500px;
+  }
+  .contact-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-card-image {
+    height: 300px;
+    width: 300px;
+  }
+  .about-grid-image-container {
+    height: 520px;
+  }
+}
+
+/**Phone**/
+
+@media screen and (max-width: 414px) {
+  .hero-container {
+    height: auto;
+    padding: 5rem;
+  }
+  .hero-grid:nth-child(1) {
+    margin: 5rem 0 0 0;
+    padding: 2rem;
+    grid-template-columns: auto;
+  }
+  .hero-grid h1 {
+    font-size: 3rem;
+  }
+  .hero-grid h2 {
+    font-size: 1.25rem;
+  }
+  .hero-grid img {
+    max-height: 370px;
+  }
+  .menu-container {
+    width: 95%;
+  }
+  .menu-card h2 {
+    font-size: 1.8rem;
+    padding: 2rem 0 2rem 0;
+  }
+  .menu-card-image {
+    height: 170px;
+    width: 170px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    margin: 1rem 0 1rem 0;
+  }
+  #about-text-2 {
+    grid-row: 1;
+  }
+  #about-image-2 {
+    grid-row: 2;
+  }
+  .about-grid-image-container {
+    height: 300px;
+    overflow: hidden;
+  }
+  .form-grid {
+    grid-template-columns: auto;
+  }
+  .form-detail {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .menu-card {
+    grid-template-columns: 1fr;
+  }
+  .menu-card-image-container {
+    text-align: center;
+  }
 }

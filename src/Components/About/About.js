@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Indoor from '../../Images/About/indoors.webp'
 import Reserve from '../../Images/About/reserve.webp'
 import Toast from '../../Images/About/toast.webp'
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 function About() {
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from('.about-anim', {
+            scrollTrigger: {
+                trigger: '.about-anim',
+                toggleActions: "restart none none reverse",
+            }, autoAlpha: 0, duration: 1, x: 70, stagger: 0.4
+        });
+
+    }, [])
+    
     return (
         <div>
             <h1 className="heading-text">About Us</h1>
@@ -17,15 +33,15 @@ function About() {
                         Traditional Italian cuisine is our speciality and with the taste of Rome to Sydney siders.
                     </p>
                 </div>
-                <div className="about-grid-image-container">
+                <div className="about-grid-image-container about-anim">
                     <img src={Indoor} alt="indoor"></img>
                 </div>
             </div>
             <div className="about-grid">
-                <div className="about-grid-image-container">
-                    <img src={Reserve} alt="indoor"></img>
+                <div className="about-grid-image-container about-anim">
+                    <img src={Reserve} alt="indoor" id="about-image-2"></img>
                 </div>
-                <div className="about-grid-text">
+                <div className="about-grid-text" id="about-text-2">
                     <h2>Indoor Dining</h2>
                     <hr />
                     <p>Our restaurant is proud to bring a taste of Italy to Sydney.
@@ -47,7 +63,7 @@ function About() {
                         Why not make a good day even better? Booking our restaurant for a private party is perfectly possible - Please send us an enquiry.
                     </p>
                 </div>
-                <div className="about-grid-image-container">
+                <div className="about-grid-image-container about-anim">
                     <img src={Toast} alt="indoor"></img>
                 </div>
             </div>
