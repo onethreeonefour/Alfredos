@@ -391,15 +391,21 @@ code {
     max-height: 370px;
   }
   .menu-container {
-    width: 95%;
+    width: 92.5%;
+  }
+  .menu-card {
+    grid-template-columns: 1fr;
+  }
+  .menu-card-image-container {
+    text-align: center;
   }
   .menu-card h2 {
     font-size: 1.8rem;
     padding: 2rem 0 2rem 0;
   }
   .menu-card-image {
-    height: 170px;
-    width: 170px;
+    height: 200px;
+    width: 200px;
   }
   .about-grid {
     grid-template-columns: 1fr;
@@ -420,14 +426,5 @@ code {
   }
   .form-detail {
     margin-bottom: 2.5rem;
-  }
-}
-
-@media screen and (max-width: 340px) {
-  .menu-card {
-    grid-template-columns: 1fr;
-  }
-  .menu-card-image-container {
-    text-align: center;
   }
 }
