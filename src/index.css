@@ -187,6 +187,12 @@ code {
 }
 
 .about-grid-image-container img {
+  object-fit: fill;
+  height: 600px;
+  width: 100%;
+}
+
+.about-grid-image-container img {
   transition: transform .7s ease-in-out;
 }
 
@@ -305,17 +311,25 @@ code {
     height: 500px;
     width: 500px;
   }
+  .about-grid-image-container {
+    height: 800px;
+  }
+  .about-grid-image-container img {
+    object-fit: fill;
+    height: 800px;
+    width: 100%;
+  }
   .about-container {
-    width: 50%;
+    width: 60%;
   }
   .contact-container {
-    width: 50%;
+    width: 45%;
   }
 }
 
 /**1440P**/
 
-@media screen and (min-width: 2560px) {
+@media screen and (max-width: 2560px) {
   .about-container {
     width: 70%;
   }
@@ -326,11 +340,38 @@ code {
   .contact-container {
     width: 60%;
   }
+  .about-grid-image-container {
+    height: 600px;
+  }
+  .about-grid-image-container img {
+    object-fit: fill;
+    height: 600px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .menu-card-container {
+    width: 100%;
+    margin: auto;
+  }
+  .about-container {
+    width: 85%;
+  }
+  .menu-card-image {
+    height: 400px;
+    width: 400px;
+    border-radius: 3px;
+  }
 }
 
 /**Tablet Pro**/
 
 @media screen and (max-width: 1024px) {
+  .menu-card-container {
+    width: 85%;
+    margin: auto;
+  }
   .hero-grid:nth-child(1) {
     padding: 2rem;
     margin: 0 3rem 0 3rem;
@@ -345,35 +386,26 @@ code {
     grid-template-columns: repeat(1, 1fr);
   }
   .menu-card-image {
-    height: 400px;
-    width: 400px;
+    height: 320px;
+    width: 320px;
   }
-  .about-container {
-    width: 92.5%;
+  .about-grid {
+    grid-template-columns: 1fr;
+    margin: 1rem 0 1rem 0;
   }
-  .about-grid-image-container {
-    height: 500px;
+  #about-text-2 {
+    grid-row: 1;
   }
-  .about-grid-image-container img {
-    object-fit: fill;
-    height: 600px;
+  #about-image-2 {
+    grid-row: 2;
   }
   .contact-container {
     width: 90%;
   }
-}
-
-@media screen and (max-width: 1024px) {
-  .menu-card-image {
-    height: 300px;
-    width: 300px;
-  }
   .about-grid-image-container {
-    height: 520px;
-  }
-  .about-grid-image-container img {
-    object-fit: fill;
-    height: 600px;
+    height: 500px;
+    padding: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -430,6 +462,8 @@ code {
   }
   .about-grid-image-container {
     height: 260px;
+    padding: 0rem;
+    margin-bottom: 0rem;
   }
   .about-grid-image-container img {
     object-fit: fill;
