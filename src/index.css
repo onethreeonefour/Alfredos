@@ -354,6 +354,10 @@ code {
   .about-grid-image-container {
     height: 500px;
   }
+  .about-grid-image-container img {
+    object-fit: fill;
+    height: 600px;
+  }
   .contact-container {
     width: 90%;
   }
@@ -366,6 +370,10 @@ code {
   }
   .about-grid-image-container {
     height: 520px;
+  }
+  .about-grid-image-container img {
+    object-fit: fill;
+    height: 600px;
   }
 }
 
@@ -417,9 +425,16 @@ code {
   #about-image-2 {
     grid-row: 2;
   }
+  .about-container {
+    width: 90%;
+  }
   .about-grid-image-container {
-    height: 300px;
-    overflow: hidden;
+    height: 260px;
+  }
+  .about-grid-image-container img {
+    object-fit: fill;
+    height: 260px;
+    width: 100%;
   }
   .form-grid {
     grid-template-columns: auto;

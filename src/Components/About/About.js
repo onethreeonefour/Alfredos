@@ -15,7 +15,7 @@ function About() {
             scrollTrigger: {
                 trigger: '.about-anim',
                 toggleActions: "restart none none reverse",
-            }, autoAlpha: 0, duration: 1, x: 70, stagger: 0.4
+            }, autoAlpha: 0, duration: 1, y: 70, stagger: 0.4
         });
 
     }, [])
