@@ -6,7 +6,7 @@ a {
 .navbar {
     display: flex;
     align-items: center;
-    background-color: rgb(228, 169, 153);
+    background-color: rgba(247, 211, 201, 0.966);
     width: 100%;
     color: black;
     font-weight: 100;
