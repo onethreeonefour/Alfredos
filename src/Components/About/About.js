@@ -1,25 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Indoor from '../../Images/About/indoors.webp'
 import Reserve from '../../Images/About/reserve.webp'
 import Toast from '../../Images/About/toast.webp'
 
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
 function About() {
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from('.about-anim', {
-            scrollTrigger: {
-                trigger: '.about-anim',
-                toggleActions: "restart none none reverse",
-            }, autoAlpha: 0, duration: 1, y: 70, stagger: 0.4
-        });
-
-    }, [])
-    
     return (
         <div>
             <h1 className="heading-text">About Us</h1>

@@ -1,25 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { menuItems } from './MenuData';
 
 
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
 
 function MenuPage() {
-
-    
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from('.card-anim', {
-            scrollTrigger: {
-                trigger: '.card-anim',
-                toggleActions: "restart none none reverse",
-            }, autoAlpha: 0, duration: 1, y: 70, stagger: 0.065
-        });
-
-    }, [])
 
     const renderCards = menuItems.map((data, index) => {
         return <div key={index} className="menu-card">
