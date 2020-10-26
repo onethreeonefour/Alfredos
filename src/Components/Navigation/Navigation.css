@@ -1,12 +1,12 @@
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    background-color: rgba(247, 211, 201, 0.966);
+    background-color: rgb(192, 87, 59);
     width: 100%;
     color: black;
     font-weight: 100;
