@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './Components/Navigation/Navigation.css';
 import LandingPage from './Components/Landing/LandingPage';
-import NavBar from './Components/Navigation/Navbar';
 import Footer from './Components/Navigation/Footer'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavBar />
     <LandingPage />
     <Footer />
   </React.StrictMode>,
